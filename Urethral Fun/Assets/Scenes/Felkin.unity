@@ -1571,6 +1571,53 @@ Transform:
   m_Father: {fileID: 2020160720}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &242906486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242906488}
+  - component: {fileID: 242906487}
+  m_Layer: 0
+  m_Name: SliderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &242906487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242906486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120107bf549095149b7751116aab45d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AreaVelocitySlider: {fileID: 142595806}
+  TopStretchSlider: {fileID: 2131423977}
+  BottomStretchSlider: {fileID: 738738584}
+  Cock: {fileID: 438264172}
+--- !u!4 &242906488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242906486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.830044, y: 1.4266133, z: -42.576042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262030067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,13 +6345,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: bonerer, Assembly-CSharp
-        m_MethodName: ChangeWheelJointProperties
-        m_Mode: 2
+      - m_Target: {fileID: 242906487}
+        m_TargetAssemblyTypeName: SlidersFunction, Assembly-CSharp
+        m_MethodName: StretchSliderManager
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 738738584}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
