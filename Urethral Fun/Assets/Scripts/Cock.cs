@@ -55,7 +55,7 @@ namespace Assets.Scripts
                     //Instantiate(bone.gameObject);
                     //GameObject tempBone = TempBoneMaker(bones, bone);
                     GameObject tempBone = CurrentTempBoneMaker.TempBoneMakerStrategy(bones, bone);
-
+                    tempBone.transform.parent = null;
                     sections[section].Add(bone);
 
                     if (section < 2) //Make variable

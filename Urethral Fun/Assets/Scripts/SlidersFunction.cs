@@ -24,9 +24,12 @@ public class SlidersFunction : MonoBehaviour
         {
 
 
-            Debug.Log(bone.transform.name);
-            Debug.Log(bone.transform.GetChildCount());
-
+            //Debug.Log(bone.transform.name);
+            Debug.Log(bone.transform.childCount);
+            if(bone.transform.childCount == 0)
+            {
+                Debug.Log(bone.transform.name);
+            }
 
         }
     }
