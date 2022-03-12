@@ -9,19 +9,19 @@ namespace Assets.Scripts
 {
     class MakeWheelJointsattheBonesPositionsAndBasedOnSectionNumber : IWheelJointMaker
     {
-        public void WheelJointManager(int section, Component bone, GameObject tempBone)
+        public void WheelJointManager(int section, Component bone, GameObject tempBone, float topFrequency, float bottomFrequency,float topDampingRatio, float bottomDampingRatio)
         {
             WheelJoint2D temp3 = bone.gameObject.AddComponent(typeof(WheelJoint2D)) as WheelJoint2D;
             JointSuspension2D suspension = temp3.suspension;
             if (section == 0) //make it into a array or something
             {
-                suspension.frequency = 3f;
-                suspension.dampingRatio = 0.8f;
+                suspension.frequency = topFrequency;
+                suspension.dampingRatio = topDampingRatio;
             }
             else if (section == 1)
             {
-                suspension.frequency = 1f;
-                suspension.dampingRatio = 0.5f;
+                suspension.frequency = bottomFrequency;
+                suspension.dampingRatio = bottomDampingRatio;
             }
             temp3.suspension = suspension;
             bone.gameObject.GetComponent<WheelJoint2D>().connectedBody = tempBone.GetComponent<Rigidbody2D>();

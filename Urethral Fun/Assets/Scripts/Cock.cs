@@ -55,6 +55,7 @@ namespace Assets.Scripts
                     //Instantiate(bone.gameObject);
                     //GameObject tempBone = TempBoneMaker(bones, bone);
                     GameObject tempBone = CurrentTempBoneMaker.TempBoneMakerStrategy(bones, bone);
+                    //tempBone.transform.parent = this.transform;
                     tempBone.transform.parent = null;
                     sections[section].Add(bone);
 
@@ -88,7 +89,7 @@ namespace Assets.Scripts
                         CurrentCapsuleColliderMaker.CapsuleColliderMakerStrategy(section, counter, bones, bone);
                         //CapsuleColliderMaker(section, counter, bones, bone);
                     }
-                    CurrentWheelJointMaker.WheelJointManager(section, bone, tempBone);
+                    CurrentWheelJointMaker.WheelJointManager(section, bone, tempBone,3f,1f,0.8f,0.5f);
                     //WhellJointManager(section, bone, tempBone);
                     counter++;
 

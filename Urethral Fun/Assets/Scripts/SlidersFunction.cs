@@ -9,6 +9,10 @@ public class SlidersFunction : MonoBehaviour
     [SerializeField] private GameObject TopStretchSlider;
     [SerializeField] private GameObject BottomStretchSlider;
     [SerializeField] private GameObject Cock;
+    [SerializeField] private float defaultTopStretch = 3f;
+    [SerializeField] private float defaultBottomStretch = 1f;
+    [SerializeField] private float defaultTopDamping = 0.8f;
+    [SerializeField] private float defaultBottomDamping = 0.5f;
 
     public void StretchSliderManager()
     {
@@ -29,7 +33,26 @@ public class SlidersFunction : MonoBehaviour
             if(bone.transform.childCount == 0)
             {
                 Debug.Log(bone.transform.name);
+                section++;
             }
+            if (section < 2)
+            {
+                JointSuspension2D suspension = bone.gameObject.GetComponent<WheelJoint2D>().suspension;
+
+                
+
+                if (section == 0)
+                {
+                    suspension.frequency = defaultTopStretch*TopStretchSlider.GetComponent<UnityEngine.UI.Slider>().value;
+                    suspension.dampingRatio = defaultTopDamping* TopStretchSlider.GetComponent<UnityEngine.UI.Slider>().value;
+                } else
+                {
+                    suspension.frequency = defaultBottomStretch* BottomStretchSlider.GetComponent<UnityEngine.UI.Slider>().value;
+                    suspension.dampingRatio = defaultBottomDamping* BottomStretchSlider.GetComponent<UnityEngine.UI.Slider>().value;
+                }
+
+                bone.gameObject.GetComponent<WheelJoint2D>().suspension = suspension;
+            } 
 
         }
     }

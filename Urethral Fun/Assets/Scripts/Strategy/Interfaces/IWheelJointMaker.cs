@@ -9,6 +9,6 @@ namespace Assets.Scripts
 {
     interface IWheelJointMaker
     {
-        void WheelJointManager(int section, Component bone, GameObject tempBone);
+        void WheelJointManager(int section, Component bone, GameObject tempBone, float topFrequency, float bottomFrequency, float topDampingRatio, float bottomDampingRatio);
     }
 }
