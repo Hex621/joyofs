@@ -15,6 +15,7 @@ namespace Assets.Scripts
             SpringJoint2D spring1 = bone.gameObject.AddComponent(typeof(SpringJoint2D)) as SpringJoint2D;
             currentSpringModifier.SpringModifierStrategy(spring1, frequency, damping);
             spring1.connectedBody = bones[counter - 1].GetComponent<Rigidbody2D>();
+            //test
         }
     }
 }
