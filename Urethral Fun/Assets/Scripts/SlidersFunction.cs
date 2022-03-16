@@ -13,6 +13,8 @@ public class SlidersFunction : MonoBehaviour
     [SerializeField] private float defaultBottomStretch = 1f;
     [SerializeField] private float defaultTopDamping = 0.8f;
     [SerializeField] private float defaultBottomDamping = 0.5f;
+    [SerializeField] private float forceVariation = 200f;
+    [SerializeField] private float forceMagnitude = 200f;
 
     public void StretchSliderManager()
     {
@@ -55,6 +57,14 @@ public class SlidersFunction : MonoBehaviour
             } 
 
         }
+    }
+    public void AreaVelocityManager()
+    {
+        AreaEffector2D area = Cock.GetComponent<AreaEffector2D>();
+        area.forceMagnitude = forceMagnitude * AreaVelocitySlider.GetComponent<UnityEngine.UI.Slider>().value;
+        area.forceVariation = forceVariation * AreaVelocitySlider.GetComponent<UnityEngine.UI.Slider>().value;
+
+
     }
 }
 

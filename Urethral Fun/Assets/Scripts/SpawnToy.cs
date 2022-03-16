@@ -11,7 +11,7 @@ public class SpawnToy : MonoBehaviour
     public void spawnSimpleObject()
     {
 
-        GameObject spawnedObject = Instantiate(objects[dropdown.GetComponent<UnityEngine.UI.Dropdown>().value], new Vector3(8, 1.5f, 0), Quaternion.identity);
+        GameObject spawnedObject = Instantiate(objects[dropdown.GetComponent<UnityEngine.UI.Dropdown>().value], new Vector3(8, 1.5f, 0), Quaternion.Euler( new Vector3(0, 0, 45)));
         spawnedObject.transform.localScale = new Vector3(slider.GetComponent<UnityEngine.UI.Slider>().value, slider.GetComponent<UnityEngine.UI.Slider>().value, 1f);
     }
 }

@@ -1143,13 +1143,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: bonerer, Assembly-CSharp
-        m_MethodName: AreaEffectorChanger
-        m_Mode: 2
+      - m_Target: {fileID: 242906487}
+        m_TargetAssemblyTypeName: SlidersFunction, Assembly-CSharp
+        m_MethodName: AreaVelocityManager
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 142595806}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1608,6 +1608,8 @@ MonoBehaviour:
   defaultBottomStretch: 1
   defaultTopDamping: 0.8
   defaultBottomDamping: 0.5
+  forceVariation: 200
+  forceMagnitude: 200
 --- !u!4 &242906488
 Transform:
   m_ObjectHideFlags: 0
