@@ -15688,5 +15688,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: beadser
       objectReference: {fileID: 0}
+    - target: {fileID: 9032521655102681345, guid: 228de919a590ed74791c948cc808ebe6, type: 3}
+      propertyPath: m_UseLimits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032521655102681345, guid: 228de919a590ed74791c948cc808ebe6, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: 129.27486
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032521655102681345, guid: 228de919a590ed74791c948cc808ebe6, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 397.73563
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228de919a590ed74791c948cc808ebe6, type: 3}
