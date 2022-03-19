@@ -15,12 +15,15 @@ public class Dragger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        dragOffset = new Vector2( transform.position.x, transform.position.y) - GetMousePos();
+        dragOffset = new Vector2(transform.position.x, transform.position.y) - GetMousePos();
     }
     private void OnMouseDrag()
     {
         Vector2 stuff = GetMousePos() + dragOffset;
         this.GetComponent<Rigidbody2D>().MovePosition(stuff);
+        Rotate();
+
+
     }
 
     Vector2 GetMousePos()
@@ -28,5 +31,23 @@ public class Dragger : MonoBehaviour
         var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         return mousePos;
+    }
+    void Update()
+    {
+       
+        
+        
+    }
+    private void Rotate()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            transform.root.Rotate(Vector3.forward * 4f, Space.Self);
+            //Debug.Log(transform.parent.name);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            transform.root.Rotate(Vector3.back * 4f, Space.Self);
+        }
     }
 }

@@ -17,8 +17,8 @@ public class OnValuechange : MonoBehaviour
         } else
         {
             slider.GetComponent<UnityEngine.UI.Slider>().maxValue = 1.8f;
-            slider.GetComponent<UnityEngine.UI.Slider>().minValue = 0.5f;
-            slider.GetComponent<UnityEngine.UI.Slider>().value = 0.9f;
+            slider.GetComponent<UnityEngine.UI.Slider>().minValue = 0.1f;
+            slider.GetComponent<UnityEngine.UI.Slider>().value = 0.5f;
         }
         
     }
