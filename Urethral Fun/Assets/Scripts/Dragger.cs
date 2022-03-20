@@ -21,7 +21,7 @@ public class Dragger : MonoBehaviour
     {
         Vector2 stuff = GetMousePos() + dragOffset;
         this.GetComponent<Rigidbody2D>().MovePosition(stuff);
-        Rotate();
+        //Rotate();
 
 
     }
