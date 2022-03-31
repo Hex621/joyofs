@@ -5146,7 +5146,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   zoomStep: 0.4
   minCamSize: 1
-  maxCamSize: 3.5
+  maxCamSize: 5
   boundSprite: {fileID: 711146226}
 --- !u!20 &519420031
 Camera:
